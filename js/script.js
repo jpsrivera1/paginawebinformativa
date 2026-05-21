@@ -632,13 +632,3 @@ function openEnlaceInfo(e, id) {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   });
 })();
-
-/* =====================================================
-   EXPORTAR FUNCIONES AL SCOPE GLOBAL
-   (requerido para onclick en HTML con type="module")
-   ===================================================== */
-window.openModal       = openModal;
-window.closeModal      = closeModal;
-window.openLightbox    = openLightbox;
-window.closeLightbox   = closeLightbox;
-window.openEnlaceInfo  = openEnlaceInfo;

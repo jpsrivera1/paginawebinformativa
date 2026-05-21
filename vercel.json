@@ -1,5 +1,4 @@
 {
-  "buildCommand": "",
-  "outputDirectory": "dist",
-  "installCommand": ""
+  "buildCommand": "echo done",
+  "outputDirectory": "."
 }
