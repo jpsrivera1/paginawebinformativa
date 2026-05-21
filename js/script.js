@@ -5,6 +5,9 @@
  * =====================================================
  */
 
+// Habilitar animaciones CSS (fallback: si este script no carga, contenido queda visible)
+document.documentElement.classList.add('js-anim');
+
 /* =====================================================
    DATOS DE MODALES DE SERVICIOS
    ===================================================== */

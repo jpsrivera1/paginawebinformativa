@@ -1375,12 +1375,15 @@ button {
 }
 
 .animate-on-scroll {
-  opacity: 0;
-  transform: translateY(28px);
   transition: opacity 0.65s ease, transform 0.65s ease;
 }
 
-.animate-on-scroll.visible {
+html.js-anim .animate-on-scroll {
+  opacity: 0;
+  transform: translateY(28px);
+}
+
+html.js-anim .animate-on-scroll.visible {
   opacity: 1;
   transform: translateY(0);
 }
