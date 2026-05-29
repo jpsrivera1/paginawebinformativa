@@ -1324,6 +1324,37 @@ button {
 /* =====================================================
    BOTÓN VOLVER ARRIBA
    ===================================================== */
+/* =====================================================
+   BOTÓN FLOTANTE YOUTUBE
+   ===================================================== */
+.btn-yt-float {
+  position: fixed;
+  bottom: 2rem;
+  left: 2rem;
+  width: 54px;
+  height: 54px;
+  background: #FF0000;
+  color: #fff;
+  font-size: 1.8rem;
+  border-radius: 50%;
+  box-shadow: 0 4px 18px rgba(255,0,0,0.45);
+  z-index: 5000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: background 0.25s, transform 0.25s, box-shadow 0.25s;
+}
+
+.btn-yt-float:hover {
+  background: #cc0000;
+  transform: translateY(-4px) scale(1.08);
+  box-shadow: 0 8px 28px rgba(255,0,0,0.55);
+}
+
+/* =====================================================
+   BOTÓN VOLVER ARRIBA
+   ===================================================== */
 .btn-top {
   position: fixed;
   bottom: 2rem;
