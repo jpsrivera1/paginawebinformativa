@@ -196,9 +196,9 @@ button {
    ===================================================== */
 .header {
   background:
-    radial-gradient(ellipse at 35% 55%, rgba(96,165,250,0.18) 0%, transparent 58%),
-    radial-gradient(ellipse at 80% 20%, rgba(59,130,246,0.12) 0%, transparent 50%),
-    linear-gradient(145deg, #04112B 0%, #0A1E5C 30%, #102488 60%, #1A3AB0 100%);
+    radial-gradient(ellipse at 30% 60%, rgba(147,197,253,0.28) 0%, transparent 55%),
+    radial-gradient(ellipse at 80% 15%, rgba(99,179,237,0.22) 0%, transparent 50%),
+    linear-gradient(145deg, #0a1e60 0%, #1338a8 35%, #1a52c8 65%, #2563eb 100%);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -344,6 +344,34 @@ button {
   flex-wrap: wrap;
 }
 
+.hero__badge {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.22);
+  border-radius: 16px;
+  padding: 0.8rem 1.25rem;
+  margin-top: 1.75rem;
+  max-width: 380px;
+  color: var(--blanco);
+  font-size: 0.95rem;
+}
+
+.hero__badge-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(253,230,138,0.18);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.35rem;
+  color: var(--amarillo-suave);
+  flex-shrink: 0;
+}
+
 /* Hero slider - 2 imágenes alternando cada 7s */
 .hero__image {
   flex: 0 0 auto;
@@ -362,19 +390,16 @@ button {
 
 .hero__slider {
   position: relative;
-  width: 340px;
-  height: 390px;
-  border-radius: 42% 58% 62% 38% / 38% 42% 58% 62%;
+  width: 420px;
+  height: 420px;
+  border-radius: 50%;
   overflow: hidden;
-  box-shadow: 0 20px 60px rgba(0,0,0,0.45), 0 0 0 1px rgba(255,255,255,0.12);
-  border: 3px solid rgba(255,255,255,0.18);
-  background: linear-gradient(145deg, #0A1E5C 0%, #1A3AB0 100%);
-  animation: sliderPulse 8s ease-in-out infinite;
-}
-
-@keyframes sliderPulse {
-  0%,100% { border-radius: 42% 58% 62% 38% / 38% 42% 58% 62%; }
-  50%      { border-radius: 60% 40% 35% 65% / 55% 60% 40% 45%; }
+  box-shadow:
+    0 0 0 6px rgba(255,255,255,0.25),
+    0 0 0 12px rgba(255,255,255,0.1),
+    0 24px 64px rgba(0,0,0,0.45);
+  border: 4px solid rgba(255,255,255,0.35);
+  background: #1338a8;
 }
 
 .hero__slide {
@@ -383,31 +408,6 @@ button {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  font-size: 0;        /* Oculta el alt-text si la imagen falla */
-  color: transparent;  /* Oculta el alt-text si la imagen falla */
-}
-
-.hero__slide--1 {
-  animation: heroFade1 14s ease-in-out infinite;
-}
-.hero__slide--2 {
-  animation: heroFade2 14s ease-in-out infinite;
-  z-index: 1;
-}
-
-@keyframes heroFade1 {
-  0%   { opacity: 1; }
-  43%  { opacity: 1; }
-  50%  { opacity: 0; }
-  93%  { opacity: 0; }
-  100% { opacity: 1; }
-}
-@keyframes heroFade2 {
-  0%   { opacity: 0; }
-  43%  { opacity: 0; }
-  50%  { opacity: 1; }
-  93%  { opacity: 1; }
-  100% { opacity: 0; }
 }
 
 /* Ocultar completamente el círculo antiguo */
@@ -1463,6 +1463,16 @@ html.js-anim .animate-on-scroll.visible {
   .hero__circle-icon {
     font-size: 5rem;
   }
+
+  .hero__slider {
+    width: 300px;
+    height: 300px;
+  }
+
+  .hero__badge {
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 /* Móvil (≤ 640px) */
@@ -1513,6 +1523,11 @@ html.js-anim .animate-on-scroll.visible {
 
   .hero__circle-icon {
     font-size: 3.5rem;
+  }
+
+  .hero__slider {
+    width: 240px;
+    height: 240px;
   }
 
   .modal {
